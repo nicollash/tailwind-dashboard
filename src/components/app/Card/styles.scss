@@ -1,0 +1,76 @@
+.card {
+  @apply w-full rounded-xl;
+
+  &-knowledge {
+    @extend .card;
+    @apply px-5 py-6 flex flex-col justify-between h-[180px];
+
+    &__header {
+      @apply w-full justify-between items-center flex;
+    }
+
+    &__title {
+      @apply text-base text-primary font-bold;
+    }
+
+    &--blue {
+      @extend .card-knowledge;
+      @apply bg-lightblue;
+    }
+
+    &--pink {
+      @extend .card-knowledge;
+      @apply bg-lightpink;
+    }
+
+    &--yellow {
+      @extend .card-knowledge;
+      @apply bg-lightyellow;
+    }
+  }
+
+  &-daily {
+    @extend .card;
+    @apply flex items-center shadow-md h-[87px] p-3;
+
+    &__icon {
+      @apply w-[55px] h-[55px] rounded-md flex justify-center items-center;
+
+      &--listening {
+        @extend .card-daily__icon;
+        @apply bg-listening;
+      }
+
+      &--grammar {
+        @extend .card-daily__icon;
+        @apply bg-grammar;
+      }
+
+      &--prounanciation {
+        @extend .card-daily__icon;
+        @apply bg-prounanciation;
+      }
+
+      &--dictionary {
+        @extend .card-daily__icon;
+        @apply bg-dictionary;
+      }
+    }
+
+    &__content {
+      @apply flex flex-col ml-3 flex-1;
+    }
+
+    &__percent {
+      @apply text-xl font-bold text-primary leading-none;
+    }
+
+    &__title {
+      @apply font-semibold text-primary;
+    }
+
+    &__desc {
+      @apply text-sm text-grey leading-none;
+    }
+  }
+}

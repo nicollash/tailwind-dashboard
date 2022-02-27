@@ -1,0 +1,63 @@
+.dashboard {
+  @apply px-10 py-12 flex-1 flex flex-col gap-14;
+
+  &__section {
+    @apply flex flex-col md:flex-row gap-7;
+  }
+
+  .title {
+    @apply text-2xl text-primary;
+  }
+
+  .knowledge {
+    @apply flex-[3] flex flex-col gap-4;
+
+    &__content {
+      @apply flex gap-7 w-full;
+    }
+  }
+
+  .account-info {
+    @apply flex-1 h-full flex items-end relative;
+
+    .avatar {
+      @apply absolute top-3 left-1/2 -translate-x-1/2;
+    }
+
+    &__content {
+      @apply w-full h-[180px] rounded-xl bg-lightgrey pt-8 px-10 flex flex-col items-center;
+
+      &--row {
+        @apply w-full justify-around flex mt-6;
+      }
+
+      &__ele {
+        @apply flex flex-col items-center;
+      }
+
+      &__subject {
+        @apply text-lg;
+      }
+
+      &__mark {
+        @apply text-xl font-bold;
+      }
+    }
+
+    &__name {
+      @apply text-xl;
+    }
+
+    &__email {
+      @apply font-light text-grey text-sm;
+    }
+  }
+
+  .statistics {
+    @apply flex-[3] flex flex-col gap-4;
+  }
+
+  .daily-progress {
+    @apply flex-1 flex flex-col gap-4;
+  }
+}
